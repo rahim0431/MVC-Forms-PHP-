@@ -3,12 +3,10 @@ class database
     {
     public static function connect() 
     {
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "internpractice";
+    
+        require __DIR__ . '/../config.php';
 
-        $connection = new mysqli($servername, $username, $password, $dbname);
+        $connection = new mysqli($db_host, $db_user, $db_pass, $db_name);
 
         if ($connection->connect_error) 
         {
