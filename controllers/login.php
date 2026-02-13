@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
         } 
         else 
         {
-            $message = "Wrong Password!";
+            $message = "Invalid Email or Password!";
             $link = "login";
             $linkText = "Try Again";
             include 'views/message.html';
@@ -42,9 +42,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST")
     } 
     else 
     {   
-        $message = "Please Enter Valid E-mail";
+        $message = "Invalid Email or Password!";
         $link = "login";
-        $linkText = "Correct E-mail";
+        $linkText = "Try Again";
         include 'views/message.html';
         exit;
     }
